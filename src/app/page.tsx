@@ -107,7 +107,7 @@ export default function App() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Team</h2>
 
         {/* Top Row: 3 Big Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-8 mb-12">
           {featuredTeam.map((member) => (
             <div
               key={member.id}
@@ -124,19 +124,19 @@ export default function App() {
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-white font-bold text-2xl leading-tight">{member.name}</h3>
-                  <p className="text-purple-300 text-base mt-1 font-medium">{member.role}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-4">
+                  <h3 className="text-white font-bold text-[10px] md:text-2xl leading-tight truncate">{member.name}</h3>
+                  <p className="text-purple-300 text-[8px] md:text-base mt-0.5 md:mt-1 font-medium truncate">{member.role}</p>
                 </div>
               </div>
 
               {/* Mini Social Icons row visible on card */}
-              <div className="flex justify-center space-x-6 p-4 border-t border-white/10 bg-black/20">
+              <div className="flex justify-center space-x-2 md:space-x-6 p-1 md:p-4 border-t border-white/10 bg-black/20">
                 {member.social.facebook && (
-                  <Facebook size={20} className="text-gray-400 group-hover:text-blue-500 transition-colors" />
+                  <Facebook className="w-3 h-3 md:w-5 md:h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
                 )}
                 {member.social.instagram && (
-                  <Instagram size={20} className="text-gray-400 group-hover:text-pink-500 transition-colors" />
+                  <Instagram className="w-3 h-3 md:w-5 md:h-5 text-gray-400 group-hover:text-pink-500 transition-colors" />
                 )}
               </div>
             </div>

@@ -1,9 +1,11 @@
-import { Music, Instagram, Facebook, PlayCircle } from 'lucide-react';
+import { Instagram, Facebook, PlayCircle } from 'lucide-react';
+import SpotifyIcon from '../components/icons/Spotify';
+import AppleMusicIcon from '../components/icons/AppleMusic';
 
 export const CONFIG = {
     // IMAGES (Ensure these files are uploaded to the file list)
     heroImage: "cover1.png",
-    mainLogo: "logo-sanes.jpg",
+    mainLogo: "image-copy.png",
 
     // TEXT CONTENT
     title: "SANES OFFICIAL",
@@ -38,11 +40,11 @@ export const CONFIG = {
 
     // SOCIAL LINKS (Global Footer/Header links)
     socials: [
-        { name: "Spotify", icon: Music, link: "#", color: "text-black" },
-        { name: "Instagram", icon: Instagram, link: "#", color: "text-black" },
-        { name: "Facebook", icon: Facebook, link: "#", color: "text-black" },
-        { name: "Youtube", icon: PlayCircle, link: "#", color: "text-black" },
-        { name: "Apple Music", icon: Music, link: "#", color: "text-black" },
+        { name: "Spotify", icon: SpotifyIcon, link: "#", color: "text-[#000000]" },
+        { name: "Instagram", icon: Instagram, link: "#", color: "text-[#000000]" },
+        { name: "Facebook", icon: Facebook, link: "#", color: "text-[#000000]" },
+        { name: "Youtube", icon: PlayCircle, link: "#", color: "text-[#000000]" },
+        { name: "AppleMusic", icon: AppleMusicIcon, link: "#", color: "text-[#000000]" },
     ],
 
     // TEAM MEMBERS

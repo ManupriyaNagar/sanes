@@ -27,14 +27,14 @@ const VideoSlider: React.FC<VideoSliderProps> = ({ slides }) => {
             {/* Navigation Buttons */}
             <button
                 onClick={prevSlide}
-                className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full text-white transition-all transform hover:scale-110"
+                className="absolute left-4 md:left-[-64px] top-1/2 -translate-y-1/2 z-20 p-3 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full text-white transition-all transform hover:scale-110 border border-white/20"
             >
                 <ChevronLeft size={32} />
             </button>
 
             <button
                 onClick={nextSlide}
-                className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 hover:bg-white/30 backdrop-blur-md rounded-full text-white transition-all transform hover:scale-110"
+                className="absolute right-4 md:right-[-64px] top-1/2 -translate-y-1/2 z-20 p-3 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full text-white transition-all transform hover:scale-110 border border-white/20"
             >
                 <ChevronRight size={32} />
             </button>

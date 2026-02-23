@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Facebook, Instagram } from 'lucide-react';
 
 interface Member {
     id: number;
     name: string;
     role: string;
     image: string;
+    social: {
+        facebook?: string;
+        instagram?: string;
+    };
 }
 
 interface TeamCarouselProps {
@@ -42,7 +46,7 @@ const TeamCarousel: React.FC<TeamCarouselProps> = ({ members, onMemberClick }) =
             {/* Scrollable Container */}
             <div
                 ref={scrollRef}
-                className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar py-4 px-2"
+                className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar py-4 px-2 justify-start md:justify-center"
             >
                 {members.map((member) => (
                     <div
@@ -61,9 +65,19 @@ const TeamCarousel: React.FC<TeamCarouselProps> = ({ members, onMemberClick }) =
                             <div className="absolute inset-0 bg-black/0 group-hover/card:bg-black/20 transition-colors" />
                         </div>
 
-                        <div className="p-3 text-center bg-black/20 h-full">
+                        <div className="p-3 text-center bg-black/20">
                             <h3 className="text-white font-bold text-sm truncate">{member.name}</h3>
                             <p className="text-gray-400 text-xs truncate mt-0.5">{member.role}</p>
+                        </div>
+
+                        {/* Social Icons Strip */}
+                        <div className="flex justify-center space-x-4 p-2 border-t border-white/5 bg-black/40">
+                            {member.social.facebook && (
+                                <Facebook size={14} className="text-gray-400 hover:text-blue-500 transition-colors" />
+                            )}
+                            {member.social.instagram && (
+                                <Instagram size={14} className="text-gray-400 hover:text-pink-500 transition-colors" />
+                            )}
                         </div>
                     </div>
                 ))}

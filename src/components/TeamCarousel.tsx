@@ -52,9 +52,9 @@ const TeamCarousel: React.FC<TeamCarouselProps> = ({ members, onMemberClick }) =
                     <div
                         key={member.id}
                         onClick={() => onMemberClick(member)}
-                        className="flex-none w-36 md:w-48 group/card bg-white/5 hover:bg-white/10 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 border border-white/5 hover:border-white/20 hover:shadow-lg hover:-translate-y-1"
+                        className="flex-none w-28 md:w-68 group/card bg-white/5 hover:bg-white/10 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 border border-white/5 hover:border-white/20 hover:shadow-lg hover:-translate-y-1"
                     >
-                        <div className="relative aspect-square overflow-hidden bg-gray-800">
+                        <div className="relative overflow-hidden bg-gray-800">
                             <img
                                 src={member.image}
                                 alt={member.name}
@@ -66,17 +66,17 @@ const TeamCarousel: React.FC<TeamCarouselProps> = ({ members, onMemberClick }) =
                         </div>
 
                         <div className="p-3 text-center bg-black/20">
-                            <h3 className="text-white font-bold text-sm truncate">{member.name}</h3>
-                            <p className="text-gray-400 text-xs truncate mt-0.5">{member.role}</p>
+                            <h3 className="text-white font-bold md:text-sm text-xs truncate">{member.name}</h3>
+                            <p className="text-gray-400 md:text-xs text-xs truncate mt-0.5">{member.role}</p>
                         </div>
 
                         {/* Social Icons Strip */}
                         <div className="flex justify-center space-x-4 p-2 border-t border-white/5 bg-black/40">
                             {member.social.facebook && (
-                                <Facebook size={14} className="text-gray-400 hover:text-blue-500 transition-colors" />
+                                <Facebook size={24} className="w-4 h-4 md:w-6 md:h-6 text-gray-400 hover:text-blue-500 transition-colors" />
                             )}
                             {member.social.instagram && (
-                                <Instagram size={14} className="text-gray-400 hover:text-pink-500 transition-colors" />
+                                <Instagram size={24} className="w-4 h-4 md:w-6 md:h-6 text-gray-400 hover:text-pink-500 transition-colors" />
                             )}
                         </div>
                     </div>

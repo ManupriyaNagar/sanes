@@ -23,46 +23,50 @@ const VideoSlider: React.FC<VideoSliderProps> = ({ slides }) => {
     if (!slides || slides.length === 0) return null;
 
     return (
-        <div className="relative w-full max-w-5xl mx-auto px-4 py-8 group">
+        <div className="relative w-full max-w-5xl mx-auto px-4 md:py-8 py-4 group">
             {/* Navigation Buttons */}
             <button
                 onClick={prevSlide}
                 className="absolute left-4 md:left-[-64px] top-1/2 -translate-y-1/2 z-20 p-3 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full text-white transition-all transform hover:scale-110 border border-white/20"
             >
-                <ChevronLeft size={32} />
+                <ChevronLeft size={12} />
             </button>
 
             <button
                 onClick={nextSlide}
                 className="absolute right-4 md:right-[-64px] top-1/2 -translate-y-1/2 z-20 p-3 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full text-white transition-all transform hover:scale-110 border border-white/20"
             >
-                <ChevronRight size={32} />
+                <ChevronRight size={12} />
             </button>
 
             {/* Slider Content */}
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black">
-                {slides.map((slide, index) => (
-                    <div
-                        key={slide.id}
-                        className={`absolute w-full h-full transition-opacity duration-500 ease-in-out ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                    >
-                        {index === current && (
-                            <iframe
-                                className="w-full h-full"
-                                src={`https://www.youtube.com/embed/${slide.videoId}?rel=0`}
-                                title={slide.title}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
-                        )}
-                        {/* Title Overlay */}
-                        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
-                            <h3 className="text-white text-lg font-bold">{slide.title}</h3>
-                        </div>
-                    </div>
-                ))}
+          <div className="flex justify-center md:block">
+    <div className="relative md:w-full md:h-120 h-65 w-95 rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10 bg-black">
+        {slides.map((slide, index) => (
+            <div
+                key={slide.id}
+                className={`absolute w-full h-full transition-opacity duration-500 ease-in-out ${
+                    index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                }`}
+            >
+                {index === current && (
+                    <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${slide.videoId}?rel=0`}
+                        title={slide.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                )}
+
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/80 to-transparent pointer-events-none">
+                    <h3 className="text-white text-lg font-bold">{slide.title}</h3>
+                </div>
             </div>
+        ))}
+    </div>
+</div>
 
             {/* Dots */}
             <div className="flex justify-center space-x-3 mt-6">

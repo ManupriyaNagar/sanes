@@ -1,4 +1,5 @@
-import { Instagram, Facebook, PlayCircle } from 'lucide-react';
+import { Instagram, Facebook, PlayCircle  } from 'lucide-react';
+
 import SpotifyIcon from '../components/icons/Spotify';
 import AppleMusicIcon from '../components/icons/AppleMusic';
 
@@ -26,25 +27,25 @@ export const CONFIG = {
             id: 2,
             type: 'video',
             videoId: 'oP7N6YwQ2kI',
-            title: "BEHIND THE SCENES",
+            title: "Our hits",
             thumbnail: "thumb2.jpg"
         },
         {
             id: 3,
             type: 'video',
             videoId: 'VC_-FqyBLec',
-            title: "UPCOMING HITS",
+            title: "Our hits",
             thumbnail: "thumb3.jpg"
         }
     ],
 
     // SOCIAL LINKS (Global Footer/Header links)
     socials: [
-        { name: "Spotify", icon: SpotifyIcon, link: "#", color: "text-[#000000]" },
-        { name: "Instagram", icon: Instagram, link: "#", color: "text-[#000000]" },
-        { name: "Facebook", icon: Facebook, link: "#", color: "text-[#000000]" },
-        { name: "Youtube", icon: PlayCircle, link: "#", color: "text-[#000000]" },
-        { name: "AppleMusic", icon: AppleMusicIcon, link: "#", color: "text-[#000000]" },
+        { name: "Spotify", icon: SpotifyIcon, link: "https://open.spotify.com/artist/02ywCxDU0MPNIzu6SAUPr7?si=bVVOdjguTaGBLJYRqvT2uw", color: "text-[#000000]" },
+        { name: "Instagram", icon: Instagram, link: "https://www.instagram.com/sanes_official/", color: "text-[#000000]" },
+        { name: "Facebook", icon: Facebook, link: "https://www.facebook.com/sanesofficial/", color: "text-[#000000]" },
+        { name: "Youtube", icon: PlayCircle, link: "https://www.youtube.com/@SanesOfficial", color: "text-[#000000]" },
+    
     ],
 
     // TEAM MEMBERS
@@ -79,7 +80,7 @@ export const CONFIG = {
             id: 5,
             name: "Amit Jha",
             role: "Singer | Composer | Director",
-            image: "/Amit.png",
+            image: "/amit.png",
             bio: "Amit Jha is a singer associated with Sanes Official. Widely known as a popular Maithili singer, he has also performed Hindi songs, showcasing his versatility. Along with singing, he actively contributes as a composer and director, supporting projects through planning, creative suggestions, and idea development, making him an important creative force within Sanes productions.",
             social: { facebook: "https://www.facebook.com/share/1CGtBTRmYa/?mibextid=wwXIfr", instagram: "https://www.instagram.com/ajofficialmusic" }
         },

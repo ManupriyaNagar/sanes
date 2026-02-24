@@ -6,6 +6,8 @@ import {
   Instagram,
 } from 'lucide-react';
 
+
+
 // Components
 import Modal from '../components/Modal';
 import TeamCarousel from '../components/TeamCarousel';
@@ -34,11 +36,12 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-900 via-[#6a0dad] border-4 border-white  to-purple-950 font-sans text-white overflow-x-hidden">
+    <div className="min-h-screen animate-bg border-4 border-white  to-purple-950 font-sans text-white overflow-x-hidden">
+
 
       {/* 1. Header Hero Section */}
       <div className="relative w-full">
-        <div className="w-full h-[250px] md:h-[400px] lg:h-[500px] bg-black">
+        <div className="w-full h-[130px] md:h-[400px] lg:h-[500px] bg-black">
           <img
             src={CONFIG.heroImage}
             alt="Cover"
@@ -48,7 +51,7 @@ export default function App() {
 
         {/* Floating Circle Logo */}
         <div className="absolute left-1/2 -bottom-16 md:-bottom-24 transform -translate-x-1/2 z-20">
-          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-white">
+          <div className="w-32 h-32 md:w-85 md:h-85 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-white">
             <img
               src={CONFIG.mainLogo}
               alt="Sanes Logo"
@@ -59,7 +62,7 @@ export default function App() {
       </div>
 
       {/* 2. Main Title Section */}
-      <div className="pt-24 md:pt-32 pb-8 text-center px-4">
+      <div className="pt-20 md:pt-32 md:pb-8 pb-4 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold tracking-wider mb-2 drop-shadow-lg text-white">
           {CONFIG.title}
         </h1>
@@ -69,8 +72,8 @@ export default function App() {
       </div>
 
       {/* 3. Slider Section */}
-      <section className="py-8">
-        <div className="text-center mb-6">
+      <section className="md:py-8">
+        <div className="text-center">
           <span className="bg-red-600 text-white px-3 py-1 rounded text-sm font-bold animate-pulse">
             NEW RELEASES
           </span>
@@ -79,8 +82,8 @@ export default function App() {
       </section>
 
       {/* 4. Social Links Section */}
-      <section className="py-16 mt-8">
-        <h2 className="text-3xl font-bold text-center mb-10">Follow Us On</h2>
+      <section className="md:py-12 mt-2">
+        <h2 className="md:text-3xl text-xl font-bold text-center md:mb-10 mb-4">Follow Us On</h2>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 px-4">
           {CONFIG.socials.map((social, idx) => (
             <a
@@ -88,13 +91,14 @@ export default function App() {
               href={social.link}
               className="group relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-2xl shadow-xl hover:scale-110 transition-all duration-300"
               aria-label={social.name}
+              target='_blank'
             >
               <social.icon
                 size={36}
                 className={`${social.color} transition-colors duration-300`}
               />
               {/* Tooltip */}
-              <span className="absolute -bottom-8 opacity-0 group-hover:opacity-100 text-sm font-medium transition-opacity">
+              <span className="absolute -bottom-8 text-sm font-medium transition-opacity">
                 {social.name}
               </span>
             </a>
@@ -103,11 +107,11 @@ export default function App() {
       </section>
 
       {/* 5. Team Section */}
-      <section className="py-16 px-4 md:px-12 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Team</h2>
+      <section className="md:py-16 py-18 px-4 md:px-12 max-w-7xl mx-auto">
+        <h2 className="text-xl md:text-3xl font-bold text-center md:mb-12 mb-4">Our Team</h2>
 
         {/* Top Row: 3 Big Cards */}
-        <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-8 mb-12">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-8 md:mb-12">
           {featuredTeam.map((member) => (
             <div
               key={member.id}
@@ -133,10 +137,10 @@ export default function App() {
               {/* Mini Social Icons row visible on card */}
               <div className="flex justify-center space-x-2 md:space-x-6 p-1 md:p-4 border-t border-white/10 bg-black/20">
                 {member.social.facebook && (
-                  <Facebook className="w-3 h-3 md:w-5 md:h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
+                  <Facebook className="w-4 h-4 md:w-6 md:h-6 text-gray-400 group-hover:text-blue-500 transition-colors" />
                 )}
                 {member.social.instagram && (
-                  <Instagram className="w-3 h-3 md:w-5 md:h-5 text-gray-400 group-hover:text-pink-500 transition-colors" />
+                  <Instagram className="w-4 h-4 md:w-6 md:h-6 text-gray-400 group-hover:text-pink-500 transition-colors" />
                 )}
               </div>
             </div>

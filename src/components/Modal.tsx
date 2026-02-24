@@ -32,29 +32,29 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, member }) => {
                 </button>
 
                 <div className="flex flex-col md:flex-row">
-                    <div className="w-full md:w-1/2 h-80 md:h-auto bg-gray-200">
+                    <div className="w-full md:w-1/2 h-[40vh] md:h-auto object-cover">
                         {/* Fallback if image doesn't exist */}
                         <img
                             src={member.image}
                             alt={member.name}
                             onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x500?text=No+Image' }}
-                            className="w-full h-full object-cover"
+                            className="w-full md:h-full object-cover  h-auto"
                         />
                     </div>
-                    <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-                        <h3 className="text-2xl font-bold text-gray-900">{member.name}</h3>
+                    <div className="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center bg-white z-10">
+                        <h3 className="md:text-4xl text-2xl font-bold text-gray-900">{member.name}</h3>
                         <p className="text-purple-600 font-semibold mb-4">{member.role}</p>
-                        <p className="text-gray-600 mb-6">{member.bio || "Member of the Sanes Official production team."}</p>
+                        <p className="text-gray-600 md:mb-6 md:text-sm text-xs">{member.bio || "Member of the Sanes Official production team."}</p>
 
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-4 md:py-0 py-4">
                             {member.social.facebook && (
-                                <a href={member.social.facebook} className="text-gray-400 hover:text-blue-700 transition-colors" title="Facebook" target='_blank'>
-                                    <Facebook size={28} target='_blank' />
+                                <a href={member.social.facebook} className="text-gray-400 hover:text-blue-700 transition-colors md:w-12 md:h-12 w-6 h-6" title="Facebook" target='_blank'>
+                                    <Facebook size={18} target='_blank' />
                                 </a>
                             )}
                             {member.social.instagram && (
-                                <a href={member.social.instagram} className="text-gray-400 hover:text-pink-600 transition-colors" title="Instagram" target='_blank'>
-                                    <Instagram size={28} target='_blank' />
+                                <a href={member.social.instagram} className="text-gray-400 hover:text-pink-600 transition-colors md:w-12 md:h-12 w-6 h-6" title="Instagram" target='_blank'>
+                                    <Instagram size={18} target='_blank' />
                                 </a>
                             )}
                         </div>

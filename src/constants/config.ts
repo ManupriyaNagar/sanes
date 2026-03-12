@@ -1,4 +1,4 @@
-import { Instagram, Facebook, PlayCircle  } from 'lucide-react';
+import { Instagram, Facebook, PlayCircle } from 'lucide-react';
 
 import SpotifyIcon from '../components/icons/Spotify';
 import AppleMusicIcon from '../components/icons/AppleMusic';
@@ -45,7 +45,7 @@ export const CONFIG = {
         { name: "Instagram", icon: Instagram, link: "https://www.instagram.com/sanes_official/", color: "text-[#000000]" },
         { name: "Facebook", icon: Facebook, link: "https://www.facebook.com/sanesofficial/", color: "text-[#000000]" },
         { name: "Youtube", icon: PlayCircle, link: "https://www.youtube.com/@SanesOfficial", color: "text-[#000000]" },
-    
+
     ],
 
     // TEAM MEMBERS
@@ -70,7 +70,7 @@ export const CONFIG = {
         {
             id: 3,
             name: "Aarav Jha",
-            role: "Creative Visualizer",
+            role: "Storyteller , Music Composer , Video FX",
             image: "/AaravDp.png",
             bio: "Aarav Jha is a Creative Visualizer and core team member at Sanes Official. He specializes in color grading, video editing, and graphic design, playing a key role in shaping the visual identity of Sanes. With a strong sense of storytelling and cinematic aesthetics, he transforms creative ideas into visually powerful content that connects emotionally with the audience.",
             social: { facebook: "https://www.facebook.com/share/176zdw7GHC/?mibextid=wwXIfr", instagram: "https://www.instagram.com/httpsaarav" }
@@ -86,14 +86,22 @@ export const CONFIG = {
         },
         {
             id: 6,
-            name: "Neeraj Jha",
-            role: "Video Editor | Poet | Shayar | Writer | Director",
-            image: "/Neeraj.png",
-            bio: "Neeraj Jha is associated with Sanes Official as a Video Editor and creative contributor. Along with editing, he is also a poet, shayar, writer, and director. His multi-creative skill set helps in planning, storytelling, and execution, ensuring smooth visual flow and meaningful narrative structure across Sanes projects.",
-            social: { facebook: "https://www.facebook.com/share/1LfsByVqJA/?mibextid=wwXIfr", instagram: "https://www.instagram.com/neerajjha.official" }
+            name: "Sunidhi Chauhan",
+            role: "Creative Visualizer | Art Director | Production Designer | Detail Enthusiast",
+            image: "/sunidhi.png",
+            bio: "Sunidhi Chauhan is associated with RBSH Pixel as an Art Director and Production Designer and the creative heartbeat of the team. Along with shaping the visual identity of every project, she is also an imaginative thinker, meticulous planner, and bold creative leader. Her multi-dimensional skill set helps in crafting compelling aesthetics, directing visual narratives, and ensuring seamless production, guaranteeing a distinctive creative output and lasting visual impact across RBSH Pixel projects.",
+            social: { facebook: "https://www.facebook.com/share/1a8ZVNZJxu/?mibextid=wwXIfr", instagram: "https://www.instagram.com/shelovesnature__/" }
         },
         {
             id: 7,
+            name: "Prashant Kumar",
+            role: "Operations Manager | Strategist | Problem Solver | Team Leader | Organiser",
+            image: "/prashant.png",
+            bio: "Prashant Kumar is associated with RBSH Pixel as an Operations Manager and core backbone of the team. Along with managing day-to-day operations, he is also a strategic thinker, efficient planner, and decisive leader. His multi-dimensional skill set helps in streamlining workflows, coordinating teams, and ensuring seamless execution, guaranteeing smooth operational flow and impactful results across RBSH Pixel projects.",
+            social: { facebook: "https://www.facebook.com/share/1B3RvcZHps/?mibextid=wwXIfr", instagram: "https://www.instagram.com/prashantt.kumar?igsh=Mm5kOGdhcWduZGEx" }
+        },
+        {
+            id: 8,
             name: "Chandan Jha",
             role: "Actor | Cricket Commentator | Cricket Analyst | Anchor | Choreographer",
             image: "/Chandan.png",
